@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(80, 208, 250);
+    background-image: url(bacground.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: "Montserrat", sans-serif;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.703);
+    width: 25rem;
+    min-width: 340px;
+    height: 30rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+.headDate{
+    font-size: 1.5rem;
+    display: flex;
+}
+img{
+    padding: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    transition: all 200ms ease-in-out;
+}
+img:hover{
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+img:active{
+    transform: scale(0.9);
+}
+.calender{
+    padding: 0.5em 0;
+    margin-top: 1rem;
+}
+.ulWeeks, .ulDays{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ulWeeks li, .ulDays li{
+    width: calc(100% / 7);
+    font-size: 1.2rem;
+    user-select: none;
+}
+.weeks{
+    border-bottom: 1px solid rgb(98, 98, 98);
+    margin-bottom: 1rem;
+}
+.weeks li{
+    font-size: 1.1rem;
+    display: block;
+    padding: 0 auto;
+    
+}
+.ulDays li{
+    padding: 0.8rem;
+    text-align:center ;
+    transition:  100ms ease-in-out;
+    cursor: pointer;
+}
+.ulDays li:hover {
+    background-color: rgba(255, 255, 255, 0.934);
+    border-radius: 50%;
+    transform: scale(0.8);
+    color: black;
+}
+.days .active{
+    background-color: rgb(141, 141, 141);
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transform: scale(0.8);
+}
+.inactive{
+    color: rgb(129, 129, 129);
+}
+.months{
+    position: relative;
+    width: 90%;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+}
+.monthsList{
+    list-style: none;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding: 1rem;
+    position: absolute;
+    display: none;
+}
+.month{
+    width: calc(100% / 3.2);
+    text-align: center;
+    padding: 0.4rem;
+    display: inline-block;
+    margin: 0.2rem 0;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+.month:hover{
+    background-color: rgba(255, 255, 255, 0.948);
+    border-radius: 0.4rem;
+}
+.month:active{
+    transform: scale(0.9);
+}
+.years{
+    margin-left: 5rem;
+    position: relative;
+}
+.year{
+    position: absolute;
+    display: none;
+}
+input{
+    width: 6.5rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.882);
+    border: 2px solid rgba(218, 218, 218, 0.624);
+    border-radius: 1rem;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+}
+input:focus{
+    outline: none;
+    
+}
